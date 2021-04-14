@@ -260,7 +260,7 @@ receiver:
 	$(PYTHON) manage.py run_callback_receiver
 
 nginx:
-        useradd -g nginx nginx
+	useradd -g nginx nginx
 	nginx -g "daemon off;"
 
 jupyter:
