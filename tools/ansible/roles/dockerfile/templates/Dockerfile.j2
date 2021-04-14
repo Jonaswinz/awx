@@ -163,7 +163,7 @@ RUN dnf --enablerepo=debuginfo -y install python3-debuginfo || :
 
 {% if build_dev|bool %}
 RUN dnf install -y podman
-RUN podman --storage-driver=vfs
+RUN podman --storage-driver=vfs info
 RUN echo -e 'cgroup_manager = "cgroupfs"\nevents_logger = "file"' > /etc/containers/libpod.conf
 {% endif %}
 
